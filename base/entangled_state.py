@@ -17,8 +17,8 @@ qc.measure(q[1],c[1])
 
 print(qc)
 
-backend = AerSimulator()
-job = backend.run(qc, shots=SHOTS)
+simulator = AerSimulator()
+job = simulator.run(qc, shots=SHOTS)
 
 result = job.result()
 counts = result.get_counts()
